@@ -21,17 +21,32 @@ pip install git+git://github.com/sayboltm/leet.git
 ```
 To remove:
 ```python
-pip uninstall
+pip uninstall leet
 ```
 
 Fun fact: the potentially unusual looking URL looks like what it does because the syntax is VCS+protocol. So this is saying use git as VCS, and Git protocol as transfer protocol. If you're using Mercurial over SSH at home or something, it would look like hg+ssh://...
 
-Extra:
+Problems?
 If you work behind a corporate firewall with a proxy and don't feel like configuring the proxy to work with pip, try using http instead of Git protocol.
+
+For example:
+```shell
+$ pip install git+git://github.com/sayboltm/leet.git
+Collecting git+git://github.com/sayboltm/leet.git
+  Cloning git://github.com/sayboltm/leet.git to c:\users\cz3qfp\appdata\local\temp\pip-8ditwmha-build
+fatal: unable to connect to github.com:
+github.com[0: 192.30.253.112]: errno=No error
+github.com[1: 192.30.253.113]: errno=No error
+
+Command "git clone -q git://github.com/sayboltm/leet.git C:\Users\CZ3QFP\AppData\Local\Temp\pip-8ditwmha-build" failed with error code 128 in None
+```
+Oh no! But fear not.
+
 ```python
 pip install git+http://github.com/sayboltm/leet.git
 ```
 Boom.
+
 ------------------------------------------------------------------------------
 
 Some examples of install urls for reference

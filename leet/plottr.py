@@ -20,6 +20,7 @@ import matplotlib.pylab as plb
 def plot(X, Y=None, x_label=' ', y_label = ' ', title = ' ', xlog=0, ylog=0):
     ''' 2D plotting function '''
     # Sick of typing out plt.crap
+    # This is much more Matlab-like
     ''' Description: Needs at least X to plot, rest of arguments are optional, but if used, must be in order or set to defaults to 'skip'. '''
     plt.figure() # Make new fig just in case
     if Y == None:
