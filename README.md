@@ -61,7 +61,11 @@ pip install git+git://github.com/myUser/foo.git@newBranch
 pip install -e git://...
 ```
 
-To actually install:
-```
-```
+# Ref urls:
+https://stackoverflow.com/questions/8247605/configuring-so-that-pip-install-can-work-from-github
 
+https://pip.pypa.io/en/stable/reference/pip_install/#vcs-support
+
+https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs
+
+https://python-packaging.readthedocs.io/en/latest/minimal.html
