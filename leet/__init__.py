@@ -3,6 +3,8 @@
 # Can import them from another file
 from .text import joke2
 #import .plottr
+from .plottr import *
+#import .plottr
 
 # declare them here
 def joke():

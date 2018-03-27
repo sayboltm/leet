@@ -11,7 +11,7 @@ locally:
 cd ~/path/to/folder
 pip install .
 ```
-or in editable mode:
+or in editable mode so you can test changes with a new import statement:
 ``` shell
 pip install -e .
 ```
@@ -34,6 +34,8 @@ To see currently supported methods and properties:
 ``` python
 dir(leet)
 ```
+might want to test out the inspect module
+https://stackoverflow.com/questions/139180/how-to-list-all-functions-in-a-python-module
 
 Fun fact: the potentially unusual looking URL looks like what it does because the syntax is VCS+protocol. So this is saying use git as VCS, and Git protocol as transfer protocol. If you're using Mercurial over SSH at home or something (but why would you), it would look like hg+ssh://...
 
