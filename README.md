@@ -25,6 +25,16 @@ To remove:
 pip uninstall leet
 ```
 
+To use:
+``` python
+import leet
+```
+
+To see currently supported methods and properties:
+``` python
+dir(leet)
+```
+
 Fun fact: the potentially unusual looking URL looks like what it does because the syntax is VCS+protocol. So this is saying use git as VCS, and Git protocol as transfer protocol. If you're using Mercurial over SSH at home or something (but why would you), it would look like hg+ssh://...
 
 Problems?
@@ -69,6 +79,7 @@ https://pip.pypa.io/en/stable/reference/pip_install/#vcs-support
 
 https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs
 
+	# packaging:
 https://python-packaging.readthedocs.io/en/latest/minimal.html
 
 TODO: add markdown language... 
