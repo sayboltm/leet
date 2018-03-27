@@ -1,4 +1,5 @@
 # Readme
+--------
 
 readme goes here. Setup tools stuff:
 Looks like there's nothing released yet! Cool!
@@ -24,7 +25,7 @@ To remove:
 pip uninstall leet
 ```
 
-Fun fact: the potentially unusual looking URL looks like what it does because the syntax is VCS+protocol. So this is saying use git as VCS, and Git protocol as transfer protocol. If you're using Mercurial over SSH at home or something, it would look like hg+ssh://...
+Fun fact: the potentially unusual looking URL looks like what it does because the syntax is VCS+protocol. So this is saying use git as VCS, and Git protocol as transfer protocol. If you're using Mercurial over SSH at home or something (but why would you), it would look like hg+ssh://...
 
 Problems?
 If you work behind a corporate firewall with a proxy and don't feel like configuring the proxy to work with pip, try using http instead of Git protocol.
@@ -69,3 +70,13 @@ https://pip.pypa.io/en/stable/reference/pip_install/#vcs-support
 https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs
 
 https://python-packaging.readthedocs.io/en/latest/minimal.html
+
+TODO: add markdown language... 
+input: 
+someWord
+output:
+someWord\n========
+
+use hacktoberfest for both LOL original addition of the comment/block
+prettifier and this upgrayyd
+
