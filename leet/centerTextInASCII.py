@@ -10,6 +10,45 @@ part of the l33t Class (or will be soon)
 import sys
 import argparse
 
+def main():    
+    parser = argparse.ArgumentParser(description='Center text string in ASCII characters')
+    parser.add_argument('string', help='The text string to center in symbols')
+    parser.add_argument('-c', '--char', default='#', help='The characters to center text in. (default = \'#\')')
+    parser.add_argument('-n', '--numchars', type=int, default=79, help='Number of chars to make up one line. (default = 79)')
+    parser.add_argument('-s', '--spaces', type=int, default=1, help='Number of spaces on each side. (default = 1)')
+    args = parser.parse_args()
+    # Num chars to make up one line
+    #num_chars_total = 79
+    num_chars_total = args.numchars
+    
+    # Char to make line with:
+    line_char = args.char #'#'
+    
+    # Text to insert:
+    text = args.string #'Data imported, time data in \'timeline\''
+    
+    # How many spaces on each side?
+    spaces = args.spaces #1
+    
+    # Print with surrounding filler lines?
+    do_filler = 1
+    
+    # [OPTIONAL] which side to default text shift to when cannot be perfectly cen?
+    # Pick one or the other
+    # [(L), R]
+    cen = [1, 0]
+        
+    ###############################################################################
+    ############################### End User Input ################################
+    ###############################################################################
+    
+    num_L, num_R = charProcessor(text, num_chars_total, spaces, cen)
+    
+    new_string, filler_string = strBuilder(num_L, num_R, num_chars_total, line_char, text, spaces, do_filler)
+    
+    print(filler_string + '\n' + new_string + '\n' + filler_string)    
+    
+    
 ############################ Function Declarations ############################
 
 def isOdd(number):
@@ -56,7 +95,7 @@ def charProcessor(text, num_chars_total, spaces, cen):
             
     return num_chars_left, num_chars_right
 
-def strBuilder(num_chars_left, num_chars_right, line_char, do_filler):
+def strBuilder(num_chars_left, num_chars_right, num_chars_total, line_char, text, spaces, do_filler):
     filler_string = ''    
     new_string = ''
     for char in range(int(num_chars_left)):
@@ -79,39 +118,8 @@ def strBuilder(num_chars_left, num_chars_right, line_char, do_filler):
             filler_string += line_char
     return new_string, filler_string
 
-###############################################################################
-############################## Begin User Input ###############################
-###############################################################################
-    
-# Num chars to make up one line
-num_chars_total = 79
 
-# Char to make line with:
-line_char = '#'
 
-# Text to insert:
-text = 'Data imported, time data in \'timeline\''
-
-# How many spaces on each side?
-spaces = 1
-
-# Print with surrounding filler lines?
-do_filler = 1
-
-# [OPTIONAL] which side to default text shift to when cannot be perfectly cen?
-# Pick one or the other
-# [(L), R]
-cen = [1, 0]
-    
-###############################################################################
-############################### End User Input ################################
-###############################################################################
-
-num_L, num_R = charProcessor(text, num_chars_total, spaces, cen)
-
-new_string, filler_string = strBuilder(num_L, num_R, line_char, do_filler)
-
-print(filler_string + '\n' + new_string + '\n' + filler_string)    
 
 
 ################################ Scratch Work #################################
@@ -139,3 +147,7 @@ for evennumchars and odd words, have to shift. default is left.
 for evennumchars and even words, just delete amount and insert.
 ## shit ##
 '''
+
+
+if __name__ == '__main__':
+    main()
