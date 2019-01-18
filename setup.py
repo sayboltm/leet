@@ -38,7 +38,7 @@ http://setuptools.readthedocs.io/en/latest/setuptools.html
 
 setup(
     entry_points={
-        'plottr': 'plottr = leet.plottr:__init__'}
+        'plottr': 'plottr = leet.plottr:__init__'},
     name='leet',
     version='0.1',
     description='The funniest joke in the world',
@@ -47,7 +47,7 @@ setup(
     author_email='sayboltm@users.noreply.github.com',
     license='MIT',
 #      packages=['leet', 'plottr'],
-    packages=find_packages()
+    packages=find_packages(),
     zip_safe=False)
 
 ## distutils < setuptools

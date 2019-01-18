@@ -1,4 +1,6 @@
-''' Must put all desired active modules inside here '''
+''' Must put all desired active modules inside this file
+use help(leet) to print options
+ '''
 
 # Can import them from another file
 from .text import joke2
@@ -8,6 +10,7 @@ from .plottr import *
 
 # declare them here
 def joke():
+    print('Printing joke1')
     return (u'Wenn ist das Nunst\u00fcck git und Slotermeyer? Ja! ... '
             u'Beiherhund das Oder die Flipperwaldt gersput.')
 
