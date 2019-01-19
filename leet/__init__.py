@@ -1,5 +1,7 @@
 ''' Must put all desired active modules inside this file
 use help(leet) to print options
+or 
+inspect.getmembers(thispkg)
  '''
 
 # Can import them from another file
@@ -7,6 +9,8 @@ from .text import joke2
 #import .plottr
 from .plottr import *
 #import .plottr
+from .centerTextInASCII import main
+#import leet.centerTextInASCII
 
 # declare them here
 def joke():

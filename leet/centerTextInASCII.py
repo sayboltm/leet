@@ -3,7 +3,7 @@
 Created on Tue May  3 14:02:59 2016
 centertextInASCII
 Desc: Centers text in ASCII
-part of the l33t Class (or will be soon)
+part of the l33t Lib
 @author: Mike
 """
 
