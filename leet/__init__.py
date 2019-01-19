@@ -5,12 +5,15 @@ inspect.getmembers(thispkg)
  '''
 
 # Can import them from another file
-from .text import joke2
+#from .text import joke2
 #import .plottr
-from .plottr import *
+#from .plottr import *
 #import .plottr
-from .centerTextInASCII import main
-#import leet.centerTextInASCII
+#from .centerTextInASCII import main # from single file
+#import leet.centerTextInASCII # from single file
+#from leet import centerTextInASCII # folder
+from . import block
+from . import block2
 
 # declare them here
 def joke():
