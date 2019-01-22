@@ -13,6 +13,7 @@ inspect.getmembers(thispkg)
 #import leet.centerTextInASCII # from single file
 #from leet import centerTextInASCII # folder
 from . import block
+from . import blockv1 # import this folder as submodule blockv1
 from . import block2
 
 # declare them here
